@@ -9,10 +9,6 @@ const App9 = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // let total = cart.reduce((previousValue, currentValue) => {
-    //   return previousValue + currentValue.quantity;
-    // }, 0);
-
     fetch("http://localhost:8080/")
       .then((res) => res.json())
       .then((data) => setProducts(data))
